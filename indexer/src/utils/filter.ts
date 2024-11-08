@@ -74,10 +74,6 @@ export function ethValidationFailed(event: Event): boolean {
  * @param {TransactionReceipt} receipt - The transaction receipt to check.
  * @returns {boolean} - Returns true if the transaction was reverted, otherwise false.
  */
-export function isReverted(
-  receipt: TransactionReceipt,
-): boolean {
-  return (
-    receipt.executionStatus.includes("REVERTED")
-  );
+export function isReverted(receipt: TransactionReceipt): boolean {
+  return receipt.executionStatus.includes("REVERTED");
 }
